@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{%block content %}
+    <form method="post" action="/auth">
+        <input name="username" type="text" placeholder="username">
+        <input name="password" type="password" placeholder="password">
+        <button>Connect</button>
+    </form>
+    {% if token %} 
+    <a href="/home">
+    <p>
+        Token: {{token}}
+    </p>
+    {% endif %}
+    {% if not token %} 
+    <a href="/oups">
+    <p>
+        Token: {{token}}
+    </p>
+    {% endif %}  
+{% endblock %}

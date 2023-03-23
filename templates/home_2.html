@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
+
+</head>
+<body>
+    <h1>Hello {{ username }}</h1>
+
+    <h2>Accueil</h2>
+
+    <form action="/submitform" method="post" enctype="multipart/form-data">
+        <input type="text" name="assignment">
+        <input type="file" name="assignment_file">
+        <input type="submit">
+
+    </form>    
+
+
+</body>
+</html>
+
+
